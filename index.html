@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Path </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>Shortest Path Finder</h1>
+        <p class="subtitle">Data Structure & Algorithms Project</p>
+        <p>Visualize pathfinding algorithms on custom graphs.
+            Click to add nodes, connect them, and find the optimal route.</p>
+    </div>
+
+    <div class="container">
+     <!-- Control Panel -->
+    <div class="control-panel">
+        <div class="control-grid">
+            <div class="control-group">
+                <label>Start Node</label>
+                <select id="startNode">
+                    <option value="">Select Start</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>End Node</label>
+                <select id="endNode">
+                    <option value="">Select End</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Algorithm</label>
+                <select id="algorithm">
+                    <option value="dijkstra">Select Algorithm</option>
+                    <option value="dijkstra">Dijkstra's Algorithm</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Preset Graphs</label>
+                <select id="presetGraph">
+                    <option value="">Custom Graph</option>
+                    <option value="simple">5 nodes</option>
+                    <option value="city">8 nodes</option>
+                    <option value="complex">10 nodes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-primary" id="findPathBtn">
+                <span>🔍 Find Shortest Path</span>
+            </button>
+            <button class="btn btn-accent" id="clearGraphBtn">
+                <span>🗑️ Clear All</span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Canvas -->
+    <div class="canvas-container">
+        <canvas id="graphCanvas"></canvas>
+    </div>
+
+     <!-- Info Panel -->
+        <div class="info-panel">
+            <h3>📊 Path Information</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Shortest Distance</div>
+                    <div class="stat-value" id="shortestDistance">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Path Nodes</div>
+                    <div class="stat-value" id="pathNodes">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Nodes</div>
+                    <div class="stat-value" id="totalNodes">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Edges</div>
+                    <div class="stat-value" id="totalEdges">0</div>
+                </div>
+            </div>
+            <div id="pathSequence" style="margin-top: 20px; padding: 15px; background: var(--bg-dark); border-radius: 10px; font-size: 0.9rem;"></div>
+        </div>
+</div>
+</body>
+
+</html>
