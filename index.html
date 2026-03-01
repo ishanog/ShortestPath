@@ -18,56 +18,59 @@
     </div>
 
     <div class="container">
-     <!-- Control Panel -->
-    <div class="control-panel">
-        <div class="control-grid">
-            <div class="control-group">
-                <label>Start Node</label>
-                <select id="startNode">
-                    <option value="">Select Start</option>
-                </select>
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="control-grid">
+                <div class="control-group">
+                    <label>Start Node</label>
+                    <select id="startNode">
+                        <option value="">Select Start</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>End Node</label>
+                    <select id="endNode">
+                        <option value="">Select End</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Algorithm</label>
+                    <select id="algorithm">
+                        <option value="dijkstra">Select Algorithm</option>
+                        <option value="dijkstra">Dijkstra's Algorithm</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Preset Graphs</label>
+                    <select id="presetGraph">
+                        <option value="">Custom Graph</option>
+                        <option value="simple">5 nodes</option>
+                        <option value="city">8 nodes</option>
+                        <option value="complex">10 nodes</option>
+                        <option value="dense">12 nodes</option>
+                        <option value="grid">15 nodes</option>
+                        <option value="large">20 nodes</option>
+                    </select>
+                </div>
             </div>
-            <div class="control-group">
-                <label>End Node</label>
-                <select id="endNode">
-                    <option value="">Select End</option>
-                </select>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="findPathBtn">
+                    <span>🔍 Find Shortest Path</span>
+                </button>
+                <button class="btn btn-accent" id="clearGraphBtn">
+                    <span>🗑️ Clear All</span>
+                </button>
             </div>
-            <div class="control-group">
-                <label>Algorithm</label>
-                <select id="algorithm">
-                    <option value="dijkstra">Select Algorithm</option>
-                    <option value="dijkstra">Dijkstra's Algorithm</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label>Preset Graphs</label>
-                <select id="presetGraph">
-                    <option value="">Custom Graph</option>
-                    <option value="simple">5 nodes</option>
-                    <option value="city">8 nodes</option>
-                    <option value="complex">10 nodes</option>
-                </select>
-            </div>
+
         </div>
 
-        <div class="button-group">
-            <button class="btn btn-primary" id="findPathBtn">
-                <span>🔍 Find Shortest Path</span>
-            </button>
-            <button class="btn btn-accent" id="clearGraphBtn">
-                <span>🗑️ Clear All</span>
-            </button>
+        <!-- Canvas -->
+        <div class="canvas-container">
+            <canvas id="graphCanvas"></canvas>
         </div>
 
-    </div>
-
-    <!-- Canvas -->
-    <div class="canvas-container">
-        <canvas id="graphCanvas"></canvas>
-    </div>
-
-     <!-- Info Panel -->
+        <!-- Info Panel -->
         <div class="info-panel">
             <h3>📊 Path Information</h3>
             <div class="stats-grid">
@@ -88,10 +91,14 @@
                     <div class="stat-value" id="totalEdges">0</div>
                 </div>
             </div>
-            <div id="pathSequence" style="margin-top: 20px; padding: 15px; background: var(--bg-dark); border-radius: 10px; font-size: 0.9rem;"></div>
+            <div id="pathSequence"
+                style="margin-top: 20px; padding: 15px; background: var(--bg-dark); border-radius: 10px; font-size: 0.9rem;">
+            </div>
         </div>
-</div>
-<script src="script.js"></script>
+    </div>
+
+    <!-- <script src="graph.js"></script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
