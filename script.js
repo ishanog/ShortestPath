@@ -245,7 +245,7 @@ document.getElementById('findPathBtn').addEventListener('click', () => {
   document.getElementById('pathSequence').innerHTML =
     '<span style="color:#94a3b8;font-size:0.8rem">Shortest Path:</span><br>' +
     '<span style="color:#39ff14;font-weight:bold;letter-spacing:1px">' + labels + '</span><br><br>' +
-    '<span style="color:#94a3b8;font-size:0.8rem">Total Cost: </span>' +
+    '<span style="color:#94a3b8;font-size:0.8rem">Total Weight: </span>' +
     '<span style="color:#f59e0b;font-weight:bold">' + result.totalDist + '</span>';
 
   draw();
